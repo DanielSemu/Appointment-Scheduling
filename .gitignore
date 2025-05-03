@@ -1,0 +1,42 @@
+# === Global ===
+*.log
+*.pot
+*.pyc
+__pycache__/
+env/
+venv/
+*.sqlite3
+.DS_Store
+*.swp
+
+# === Django backend ===
+# (Assuming your Django project is inside a folder like `backend/` or `server/`)
+# Migrations (optional if you want to ignore them)
+**/migrations/
+# Ignore local settings if any
+**/local_settings.py
+# Ignore media files (optional)
+media/
+# Static files (Django collectstatic output)
+staticfiles/
+static/
+
+# === React frontend ===
+# (Assuming your React app is inside a folder like `frontend/` or `client/`)
+**/node_modules/
+**/build/
+**/.next/
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+# Yarn or pnpm logs
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# === Other ===
+# VSCode settings (optional)
+.vscode/
+# System files
+Thumbs.db
