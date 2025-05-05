@@ -10,11 +10,11 @@ const Navbar = () => {
   return (
     <>
       <div className="max-w-8xl mx-auto">
-        <div className="py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 dark:border-slate-300/10 mx-4 lg:mx-0">
+        <div className="py-4 border-b border-slate-900/10 lg:px-8 lg:border-0  mx-4 lg:mx-0">
           <div className="relative flex items-center">
             <a
               className="mr-3 flex-none w-[2.0625rem] overflow-hidden md:w-auto"
-              href="/"
+              href="#"
             >
               <span className="sr-only ">Tailwind CSS home page</span>
               <svg viewBox="0 0 248 31" className="text-slate-900  w-auto h-5">
@@ -34,7 +34,7 @@ const Navbar = () => {
             </a>
             <div className="relative" data-headlessui-state="">
               <button
-                className="text-xs leading-5 font-semibold bg-slate-400/10 rounded-full py-1 px-3 flex items-center space-x-2 hover:bg-slate-400/20 dark:highlight-white/5"
+                className="text-xs leading-5 font-semibold bg-slate-400/10 rounded-full py-1 px-3 flex items-center space-x-2 hover:bg-slate-400/20"
                 id="headlessui-menu-button-:rg:"
                 type="button"
                 aria-haspopup="menu"
@@ -60,7 +60,7 @@ const Navbar = () => {
             </div>
             <a
               href="#"
-              className="ml-3 text-xs leading-5 font-medium text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20"
+              className="ml-3 text-xs leading-5 font-medium text-sky-600  bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20"
             >
               <strong className="font-semibold">Introducing Catalyst</strong>
               <svg
@@ -68,7 +68,7 @@ const Navbar = () => {
                 height="2"
                 fill="currentColor"
                 aria-hidden="true"
-                className="ml-2 text-sky-600 dark:text-sky-400/70"
+                className="ml-2 text-sky-600 /70"
               >
                 <circle cx="1" cy="1" r="1"></circle>
               </svg>
@@ -78,7 +78,7 @@ const Navbar = () => {
               <svg
                 width="3"
                 height="6"
-                className="ml-3 overflow-visible text-sky-300 dark:text-sky-400"
+                className="ml-3 overflow-visible text-sky-300 "
                 aria-hidden="true"
               >
                 <path
@@ -92,43 +92,43 @@ const Navbar = () => {
               </svg>
             </a>
             <div className="relative hidden lg:flex items-center ml-auto">
-              <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
+              <nav className="text-sm leading-6 font-semibold text-slate-700 ">
                 <ul className="flex space-x-8">
                   <li>
                     <a
-                      className="hover:text-sky-500 dark:hover:text-sky-400"
-                      href="/docs/installation"
+                      className="hover:text-sky-500 "
+                      href="#"
                     >
                       Docs
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://tailwindui.com/?ref=top"
-                      className="hover:text-sky-500 dark:hover:text-sky-400"
+                      href="#"
+                      className="hover:text-sky-500 "
                     >
                       Components
                     </a>
                   </li>
                   <li>
                     <a
-                      className="hover:text-sky-500 dark:hover:text-sky-400"
-                      href="/blog"
+                      className="hover:text-sky-500 "
+                      href="#"
                     >
                       Blog
                     </a>
                   </li>
                   <li>
                     <a
-                      className="hover:text-sky-500 dark:hover:text-sky-400"
-                      href="/showcase"
+                      className="hover:text-sky-500 "
+                      href="#"
                     >
                       Showcase
                     </a>
                   </li>
                 </ul>
               </nav>
-              <div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
+              <div className="flex items-center border-l border-slate-200 ml-6 pl-6 ">
                 <label
                   className="sr-only"
                   htmlFor="headlessui-listbox-button-:rk:"
@@ -145,7 +145,7 @@ const Navbar = () => {
                   data-headlessui-state=""
                   aria-labelledby="headlessui-label-:rj: headlessui-listbox-button-:rk:"
                 >
-                  <span className="dark:hidden">
+                  <span className="">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -156,15 +156,15 @@ const Navbar = () => {
                     >
                       <path
                         d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                        className="stroke-slate-400 dark:stroke-slate-500"
+                        className="stroke-slate-400 "
                       ></path>
                       <path
                         d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836"
-                        className="stroke-slate-400 dark:stroke-slate-500"
+                        className="stroke-slate-400 "
                       ></path>
                     </svg>
                   </span>
-                  <span className="hidden dark:inline">
+                  <span className="hidden">
                     <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
                       <path
                         fillRule="evenodd"
@@ -174,20 +174,20 @@ const Navbar = () => {
                       ></path>
                       <path
                         d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z"
-                        className="fill-slate-400 dark:fill-slate-500"
+                        className="fill-slate-400 "
                       ></path>
                       <path
                         fillRule="evenodd"
                         clipRule="evenodd"
                         d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
-                        className="fill-slate-400 dark:fill-slate-500"
+                        className="fill-slate-400 "
                       ></path>
                     </svg>
                   </span>
                 </button>
                 <a
-                  href="https://github.com/tailwindlabs/tailwindcss"
-                  className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
+                  href="#"
+                  className="ml-6 block text-slate-400 hover:text-slate-500 "
                 >
                   <span className="sr-only">Tailwind CSS on GitHub</span>
                   <svg
@@ -204,7 +204,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={()=>setOpenSearchBar(true)}
-              className="ml-auto text-slate-500 w-8 h-8 -my-1 flex items-center justify-center hover:text-slate-600 lg:hidden dark:text-slate-400 dark:hover:text-slate-300"
+              className="ml-auto text-slate-500 w-8 h-8 -my-1 flex items-center justify-center hover:text-slate-600 lg:hidden"
             >
               <span className="sr-only">Search</span>
               <svg
@@ -225,7 +225,7 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={()=>setOpenMobileView(true)}
-                className="text-slate-500 w-8 h-8 flex items-center justify-center hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+                className="text-slate-500 w-8 h-8 flex items-center justify-center hover:text-slate-600"
               >
                 <span className="sr-only">Navigation</span>
                 <svg width="24" height="24" fill="none" aria-hidden="true">
@@ -259,11 +259,11 @@ const Navbar = () => {
           </div>
         </div>
         {/* sidebar menu */}
-        <div className="flex items-center p-4 border-b border-slate-900/10 lg:hidden dark:border-slate-50/[0.06]">
+        <div className="flex items-center p-4 border-b border-slate-900/10 lg:hidden">
           <button
             type="button"
             onClick={()=>setOpenMobileSidebar(true)}
-            className="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+            className="text-slate-500 hover:text-slate-600"
           >
             <span className="sr-only">Navigation</span>
             <svg width="24" height="24">
@@ -294,7 +294,7 @@ const Navbar = () => {
                 ></path>
               </svg>
             </li>
-            <li className="font-semibold text-slate-900 truncate dark:text-slate-200">
+            <li className="font-semibold text-slate-900 truncate ">
               Installation
             </li>
           </ol>

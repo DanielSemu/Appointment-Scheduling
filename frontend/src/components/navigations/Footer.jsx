@@ -27,14 +27,14 @@ const Footer = () => {
             <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
             <ul className="flex flex-col gap-2 text-gray-600">
               <li>+0-000-000-000</li>
-              <li>greatstackdev@gmail.com</li>
+              <li>danielsemu@gmail.com</li>
             </ul>
           </div>
         </div>
         <div>
           <hr />
           <p className="py-5 text-sm text-center">
-            Copyright 2024 @ Greatstack.dev - All Right Reserved.
+            Copyright 2024 @ Daniel-Semu - All Right Reserved.
           </p>
         </div>
       </div>
