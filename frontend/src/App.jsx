@@ -7,6 +7,7 @@ import SideBar from "./components/navigations/SideBar";
 import Navbar from "./components/navigations/Navbar";
 import Login from "./components/auth/Login";
 import Footer from "./components/navigations/Footer";
+import MainContent from "./components/main/MainContent";
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
      
      <SideBar/>
      <Navbar/>
-     <main className="w-full   lg:ml-[19rem] relative z-20 pt-10 xl:max-w-none">
+     <MainContent/>
+     {/* <main className="w-full   lg:ml-[19rem] relative z-20 pt-10 xl:max-w-none">
       <Register/>
       <Login/>
-     </main>
+     </main> */}
      <Footer/>
     </>
   );
