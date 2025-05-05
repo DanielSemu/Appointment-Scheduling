@@ -6,6 +6,7 @@ import MobileSideBar from "./MobileSideBar";
 const Navbar = () => {
     const [openMobileView ,setOpenMobileView]=useState(false)
     const [openMobileSidebar ,setOpenMobileSidebar]=useState(false)
+    const [openSearchBar ,setOpenSearchBar]=useState(false)
   return (
     <>
       <div className="max-w-8xl mx-auto">
@@ -58,7 +59,7 @@ const Navbar = () => {
               </button>
             </div>
             <a
-              href="https://tailwindcss.com/blog/2024-05-24-catalyst-application-layouts"
+              href="#"
               className="ml-3 text-xs leading-5 font-medium text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20"
             >
               <strong className="font-semibold">Introducing Catalyst</strong>
@@ -202,6 +203,7 @@ const Navbar = () => {
             </div>
             <button
               type="button"
+              onClick={()=>setOpenSearchBar(true)}
               className="ml-auto text-slate-500 w-8 h-8 -my-1 flex items-center justify-center hover:text-slate-600 lg:hidden dark:text-slate-400 dark:hover:text-slate-300"
             >
               <span className="sr-only">Search</span>
@@ -307,7 +309,10 @@ const Navbar = () => {
         setOpenMobileSidebar={setOpenMobileSidebar}
         />
         {/* Search Button */}
-        <NavigationSearch/>
+        <NavigationSearch
+        openSearchBar={openSearchBar}
+        setOpenSearchBar={setOpenSearchBar}
+        />
       </div>
     </>
   );
