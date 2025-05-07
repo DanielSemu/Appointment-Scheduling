@@ -1,34 +1,36 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import MobileNavigation from "./MobileNavigation";
 import NavigationSearch from "./NavigationSearch";
 import MobileSideBar from "./MobileSideBar";
 
 const Navbar = () => {
-    const [openMobileView ,setOpenMobileView]=useState(false)
-    const [openMobileSidebar ,setOpenMobileSidebar]=useState(false)
-    const [openSearchBar ,setOpenSearchBar]=useState(false)
-    const [scrolled, setScrolled] = useState(false);
+  const [openMobileView, setOpenMobileView] = useState(false);
+  const [openMobileSidebar, setOpenMobileSidebar] = useState(false);
+  const [openSearchBar, setOpenSearchBar] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {
-      const handleScroll = () => {
-        const offset = window.scrollY;
-        if (offset > 10) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
-        }
-      };
-    
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <div className={`max-w-8xl top-0 left-0 right-0 mx-auto fixed z-50 transition-all duration-200 ${
-  scrolled ? 'bg-white shadow-md' : 'bg-transparent'
-}`}>
+      <div
+        className={`max-w-8xl top-0 left-0 right-0 mx-auto fixed z-50 transition-all duration-200 ${
+          scrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
+      >
         <div className="py-4 border-b border-slate-900/10 lg:px-8 lg:border-0  mx-4 lg:mx-0">
           <div className="relative flex items-center">
             <a
@@ -51,97 +53,27 @@ const Navbar = () => {
                 ></path>
               </svg>
             </a>
-            <div className="relative" data-headlessui-state="">
-              <button
-                className="text-xs leading-5 font-semibold bg-slate-400/10 rounded-full py-1 px-3 flex items-center space-x-2 hover:bg-slate-400/20"
-                id="headlessui-menu-button-:rg:"
-                type="button"
-                aria-haspopup="menu"
-                aria-expanded="false"
-                data-headlessui-state=""
-              >
-                v3.4.17
-                <svg
-                  width="6"
-                  height="3"
-                  className="ml-2 overflow-visible"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M0 0L3 3L6 0"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <a
-              href="#"
-              className="ml-3 text-xs leading-5 font-medium text-sky-600  bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20"
-            >
-              <strong className="font-semibold">Introducing Catalyst</strong>
-              <svg
-                width="2"
-                height="2"
-                fill="currentColor"
-                aria-hidden="true"
-                className="ml-2 text-sky-600 /70"
-              >
-                <circle cx="1" cy="1" r="1"></circle>
-              </svg>
-              <span className="ml-2">
-                A modern application UI kit for React
-              </span>
-              <svg
-                width="3"
-                height="6"
-                className="ml-3 overflow-visible text-sky-300 "
-                aria-hidden="true"
-              >
-                <path
-                  d="M0 0L3 3L0 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-              </svg>
-            </a>
+
             <div className="relative hidden lg:flex items-center ml-auto">
               <nav className="text-sm leading-6 font-semibold text-slate-700 ">
                 <ul className="flex space-x-8">
                   <li>
-                    <a
-                      className="hover:text-sky-500 "
-                      href="#"
-                    >
+                    <a className="hover:text-sky-500 " href="#">
                       Docs
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-sky-500 "
-                    >
+                    <a href="#" className="hover:text-sky-500 ">
                       Components
                     </a>
                   </li>
                   <li>
-                    <a
-                      className="hover:text-sky-500 "
-                      href="#"
-                    >
+                    <a className="hover:text-sky-500 " href="#">
                       Blog
                     </a>
                   </li>
                   <li>
-                    <a
-                      className="hover:text-sky-500 "
-                      href="#"
-                    >
+                    <a className="hover:text-sky-500 " href="#">
                       Showcase
                     </a>
                   </li>
@@ -222,7 +154,7 @@ const Navbar = () => {
             </div>
             <button
               type="button"
-              onClick={()=>setOpenSearchBar(true)}
+              onClick={() => setOpenSearchBar(true)}
               className="ml-auto text-slate-500 w-8 h-8 -my-1 flex items-center justify-center hover:text-slate-600 lg:hidden"
             >
               <span className="sr-only">Search</span>
@@ -243,7 +175,7 @@ const Navbar = () => {
             <div className="ml-2 -my-1 lg:hidden">
               <button
                 type="button"
-                onClick={()=>setOpenMobileView(true)}
+                onClick={() => setOpenMobileView(true)}
                 className="text-slate-500 w-8 h-8 flex items-center justify-center hover:text-slate-600"
               >
                 <span className="sr-only">Navigation</span>
@@ -281,7 +213,7 @@ const Navbar = () => {
         <div className="flex items-center p-4 border-b border-slate-900/10 lg:hidden">
           <button
             type="button"
-            onClick={()=>setOpenMobileSidebar(true)}
+            onClick={() => setOpenMobileSidebar(true)}
             className="text-slate-500 hover:text-slate-600"
           >
             <span className="sr-only">Navigation</span>
@@ -320,17 +252,17 @@ const Navbar = () => {
         </div>
         {/* navbar mobile view */}
         <MobileNavigation
-         openMobileView={openMobileView}
-         setOpenMobileView={setOpenMobileView}
+          openMobileView={openMobileView}
+          setOpenMobileView={setOpenMobileView}
         />
         <MobileSideBar
-        openMobileSidebar={openMobileSidebar}
-        setOpenMobileSidebar={setOpenMobileSidebar}
+          openMobileSidebar={openMobileSidebar}
+          setOpenMobileSidebar={setOpenMobileSidebar}
         />
         {/* Search Button */}
         <NavigationSearch
-        openSearchBar={openSearchBar}
-        setOpenSearchBar={setOpenSearchBar}
+          openSearchBar={openSearchBar}
+          setOpenSearchBar={setOpenSearchBar}
         />
       </div>
     </>
